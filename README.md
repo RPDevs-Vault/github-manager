@@ -41,10 +41,10 @@ The section below is automatically compiled and updated every 6 hours by the [Gl
 
 <!-- HEALTH_DASHBOARD_START -->
 
-Last Updated: `2026-07-03 13:17:41 UTC`
+Last Updated: `2026-07-03 13:20:42 UTC`
 
 ### 🔑 API Rate Limits
-- **Core Rate Limit:** `4995/5000` (99.9% remaining)
+- **Core Rate Limit:** `4992/5000` (99.8% remaining)
 - **Reset Time:** `14:10:13 UTC`
 
 ### 🖥️ Self-Hosted Runner Fleet
@@ -52,11 +52,6 @@ Last Updated: `2026-07-03 13:17:41 UTC`
 | Runner Name | OS | Status | Labels |
 | :--- | :--- | :--- | :--- |
 | `local-runner-01` | Linux | 🔴 Offline | `X64, local, linux64` |
-
-### 🌡️ Hardware Telemetry
-| Hostname | CPU | Memory | Shared Disk | Temperatures | Last Updated |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `llmadmin01` | 13.7% | 62.7% | 66.15% | acpitz: 25.0°C, nvme: 33.85°C, coretemp: 55.0°C, pch_cannonlake: 48.0°C, dell_smm: 60.0°C, iwlwifi_1: 48.0°C | 08:38:56 UTC |
 
 ### 📦 Manager Workflows Health (RPDevs-Vault)
 | Repository | Workflow | Status | Conclusion | Run Link | Last Run |
@@ -66,7 +61,7 @@ Last Updated: `2026-07-03 13:17:41 UTC`
 | `container-manager` | Base Image Builder | ❌ `completed` | `failure` | [Run #1](https://github.com/RPDevs-Vault/container-manager/actions/runs/28648997401) | 2026-07-03 08:40 UTC |
 | `container-manager` | Docker Collector | ✅ `completed` | `success` | [Run #32](https://github.com/RPDevs-Vault/container-manager/actions/runs/28636565388) | 2026-07-03 03:33 UTC |
 | `container-manager` | Fleet Status Aggregator | ✅ `completed` | `success` | [Run #14](https://github.com/RPDevs-Vault/container-manager/actions/runs/28659224802) | 2026-07-03 12:01 UTC |
-| `github-manager` | Global Health Dashboard | ✅ `completed` | `success` | [Run #2](https://github.com/RPDevs-Vault/github-manager/actions/runs/28648992376) | 2026-07-03 08:39 UTC |
+| `github-manager` | Global Health Dashboard | 🔄 `in_progress` | `Running...` | [Run #3](https://github.com/RPDevs-Vault/github-manager/actions/runs/28663261141) | 2026-07-03 13:20 UTC |
 | `project-manager` | Project Roadmap Sync | ✅ `completed` | `success` | [Run #1](https://github.com/RPDevs-Vault/project-manager/actions/runs/28648314960) | 2026-07-03 08:26 UTC |
 | `monitor-manager` | Heartbeat Uptime Check | ✅ `completed` | `success` | [Run #1](https://github.com/RPDevs-Vault/monitor-manager/actions/runs/28659025071) | 2026-07-03 11:57 UTC |
 | `deploy-manager` | *No runs discovered* | - | - | - | - |
