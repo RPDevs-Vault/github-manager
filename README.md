@@ -10,22 +10,28 @@ The management infrastructure of the RPDevs-Vault is organized into a tiered sys
 
 ```mermaid
 graph TD
-    HM[github-manager<br>Tier 0: Systems Cockpit] -->|Aggregates & Monitors| VM[vault-manager<br>Tier 1: Hub & Governance]
-    HM -->|Aggregates & Monitors| CM[container-manager<br>Tier 2: Builder Fleet]
-    HM -->|Aggregates & Monitors| PM[project-manager<br>Tier 3: Task & Issue Sync]
-    HM -->|Aggregates & Monitors| DM[distributor-manager<br>Tier 4: Release Gateway]
+    HM[github-manager<br>Tier 0: Systems Cockpit] --> MM[monitor-manager<br>Tier 0.5: Observability]
+    HM --> VM[vault-manager<br>Tier 1: Hub & Governance]
+    VM --> IM[identity-manager<br>Tier 1.5: Secret & Key Broker]
     
-    VM -->|Emits Dispatch Events| CM
-    CM -->|Pushes Artifacts| GHCR[GitHub Container Registry]
-    PM -->|Audits & Scaffolds| FleetRepos[Fleet Repositories]
+    CM[container-manager<br>Tier 2: Builder Fleet] --> PM[project-manager<br>Tier 3: Task Sync]
+    
+    DM[distributor-manager<br>Tier 4: Release Gateway] --> DEM[deploy-manager<br>Tier 4.5: GitOps Deployer]
+    
+    TM[thought-manager<br>Tier 5: Knowledge Core] -.->|Syncs Heuristics| HM
 ```
 
 | Manager | Role / Tier | Key Functions | Repository Link |
 | :--- | :--- | :--- | :--- |
-| **`vault-manager`** | **Tier 1 (The Hub)** | Org governance, automated daily fork sync, merged branch cleanup, issue label standardization, stale fork auditing, notification control. | [vault-manager](https://github.com/RPDevs-Vault/vault-manager) |
-| **`container-manager`** | **Tier 2 (The Builder)** | Compilation registry, multi-platform Docker builds, OCI package mirroring, disk housekeeping, self-hosted runner base image generation. | [container-manager](https://github.com/RPDevs-Vault/container-manager) |
-| **`github-manager`** | **Tier 0 (The Cockpit)** | Global health dashboard, self-hosted runner configurations (`llmadmin` & `t430` pools), organization rate-limit monitoring, infrastructure docker-composes. | [github-manager](https://github.com/RPDevs-Vault/github-manager) |
-| **`project-manager`** | **Tier 3 (The Sync)** | Local workstation project scanner/auditor/scaffolder, organization-wide issue collector, active task dashboard, development milestone tracking. | [project-manager](https://github.com/RPDevs-Vault/project-manager) |
+| **`github-manager`** | **Tier 0 (The Cockpit)** | Global health dashboard, self-hosted runner configurations, API limit telemetry, runner monitoring. | [github-manager](https://github.com/RPDevs-Vault/github-manager) |
+| **`monitor-manager`** | **Tier 0.5 (Observability)** | Active connectivity probes, endpoint ping heartbeats, push notifications. | [monitor-manager](https://github.com/RPDevs-Vault/monitor-manager) |
+| **`vault-manager`** | **Tier 1 (The Hub)** | Org governance, automated daily fork sync, merged branch cleanup, issue label standardization. | [vault-manager](https://github.com/RPDevs-Vault/vault-manager) |
+| **`identity-manager`** | **Tier 1.5 (Secret Broker)** | JSON schemas for environment variables, Age/FIDO2 setup guides, keys registry. | [identity-manager](https://github.com/RPDevs-Vault/identity-manager) |
+| **`container-manager`** | **Tier 2 (The Builder)** | Compilation registry, multi-platform Docker builds, OCI package mirroring, ccache. | [container-manager](https://github.com/RPDevs-Vault/container-manager) |
+| **`project-manager`** | **Tier 3 (The Sync)** | Local workstation project scanner, org-wide issue collector, active task dashboard. | [project-manager](https://github.com/RPDevs-Vault/project-manager) |
+| **`distributor-manager`** | **Tier 4 (The Release)** | Final artifact publishing, release generation, changelog assembly. | [distributor-manager](https://github.com/RPDevs-Vault/distributor-manager) |
+| **`deploy-manager`** | **Tier 4.5 (The GitOps)** | Ansible provisioner playbooks, docker-compose runtime mappings, rolling deploy trigger. | [deploy-manager](https://github.com/RPDevs-Vault/deploy-manager) |
+| **`thought-manager`** | **Tier 5 (The Thought)** | ADR archive, custom agent skillbooks, implementation markdown templates. | [thought-manager](https://github.com/RPDevs-Vault/thought-manager) |
 
 ---
 
