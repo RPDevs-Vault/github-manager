@@ -34,10 +34,10 @@ The section below is automatically compiled and updated every 6 hours by the [Gl
 
 <!-- HEALTH_DASHBOARD_START -->
 
-Last Updated: `2026-07-03 08:25:48 UTC`
+Last Updated: `2026-07-03 08:39:41 UTC`
 
 ### 🔑 API Rate Limits
-- **Core Rate Limit:** `4991/5000` (99.8% remaining)
+- **Core Rate Limit:** `4969/5000` (99.4% remaining)
 - **Reset Time:** `09:12:51 UTC`
 
 ### 🖥️ Self-Hosted Runner Fleet
@@ -48,15 +48,16 @@ Last Updated: `2026-07-03 08:25:48 UTC`
 ### 📦 Manager Workflows Health
 | Repository | Workflow | Status | Conclusion | Run Link | Last Run |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| `vault-manager` | .github/workflows/archive-engine.yml | ❌ `completed` | `failure` | [Run #8](https://github.com/RPDevs-Vault/vault-manager/actions/runs/28648373692) | 2026-07-03 08:27 UTC |
+| `vault-manager` | .github/workflows/health-dashboard.yml | ❌ `completed` | `failure` | [Run #7](https://github.com/RPDevs-Vault/vault-manager/actions/runs/28648373236) | 2026-07-03 08:27 UTC |
 | `vault-manager` | Streamline Notifications | ✅ `completed` | `success` | [Run #22](https://github.com/RPDevs-Vault/vault-manager/actions/runs/28640842976) | 2026-07-03 05:38 UTC |
 | `vault-manager` | Sync All Forks | ✅ `completed` | `success` | [Run #20](https://github.com/RPDevs-Vault/vault-manager/actions/runs/28636561562) | 2026-07-03 03:32 UTC |
-| `vault-manager` | .github/workflows/archive-engine.yml | ❌ `completed` | `failure` | [Run #7](https://github.com/RPDevs-Vault/vault-manager/actions/runs/28565557128) | 2026-07-02 04:31 UTC |
-| `vault-manager` | .github/workflows/health-dashboard.yml | ❌ `completed` | `failure` | [Run #6](https://github.com/RPDevs-Vault/vault-manager/actions/runs/28565556882) | 2026-07-02 04:31 UTC |
+| `container-manager` | Base Image Builder | ⏳ `queued` | `Running...` | [Run #1](https://github.com/RPDevs-Vault/container-manager/actions/runs/28648997401) | 2026-07-03 08:39 UTC |
 | `container-manager` | Fleet Status Aggregator | ✅ `completed` | `success` | [Run #12](https://github.com/RPDevs-Vault/container-manager/actions/runs/28642604800) | 2026-07-03 06:23 UTC |
 | `container-manager` | Docker Collector | ✅ `completed` | `success` | [Run #32](https://github.com/RPDevs-Vault/container-manager/actions/runs/28636565388) | 2026-07-03 03:33 UTC |
 | `container-manager` | Dependency Build Engine | ❌ `completed` | `failure` | [Run #9](https://github.com/RPDevs-Vault/container-manager/actions/runs/28635655224) | 2026-07-03 04:38 UTC |
-| `github-manager` | Global Health Dashboard | 🔄 `in_progress` | `Running...` | [Run #1](https://github.com/RPDevs-Vault/github-manager/actions/runs/28648292581) | 2026-07-03 08:25 UTC |
-| `RPDevs-Vault/project-manager` | *No runs discovered* | - | - | - | - |
+| `github-manager` | Global Health Dashboard | 🔄 `in_progress` | `Running...` | [Run #2](https://github.com/RPDevs-Vault/github-manager/actions/runs/28648992376) | 2026-07-03 08:39 UTC |
+| `project-manager` | Project Roadmap Sync | ✅ `completed` | `success` | [Run #1](https://github.com/RPDevs-Vault/project-manager/actions/runs/28648314960) | 2026-07-03 08:26 UTC |
 
 <!-- HEALTH_DASHBOARD_END -->
 
