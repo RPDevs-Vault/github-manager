@@ -1,18 +1,19 @@
-# 🎮 GitHub Manager — Systems Control Cockpit
+# 🌐 GitHub Manager — Tier 0: Systems Control Cockpit
 
-Welcome to the **github-manager** command center. This repository serves as the high-level orchestration hub and digital nervous system for the **RPDevs-Vault** organization, overseeing a fleet of 260+ repositories and automated workflows.
+Welcome to the **github-manager** command center. This repository serves as the Tier 0 global orchestration hub and digital nervous system for the **RPDevs-Vault** organization, overseeing a fleet of 260+ repositories and automated workflows.
 
 ---
 
 ## 🏛️ Manager Fleet Architecture
 
-The management infrastructure of the RPDevs-Vault is organized into a tiered system to separate governance, package compilation, task tracking, and global health monitoring:
+The management infrastructure of the RPDevs-Vault is organized into a tiered system to separate governance, package compilation, task tracking, distribution, and global health monitoring:
 
 ```mermaid
 graph TD
-    HM[github-manager<br>Systems Cockpit] -->|Aggregates & Monitors| VM[vault-manager<br>Tier 1: Hub & Governance]
-    HM -->|Aggregates & Monitors| CM[container-manager<br>Tier 2: Builder & Packages]
+    HM[github-manager<br>Tier 0: Systems Cockpit] -->|Aggregates & Monitors| VM[vault-manager<br>Tier 1: Hub & Governance]
+    HM -->|Aggregates & Monitors| CM[container-manager<br>Tier 2: Builder Fleet]
     HM -->|Aggregates & Monitors| PM[project-manager<br>Tier 3: Task & Issue Sync]
+    HM -->|Aggregates & Monitors| DM[distributor-manager<br>Tier 4: Release Gateway]
     
     VM -->|Emits Dispatch Events| CM
     CM -->|Pushes Artifacts| GHCR[GitHub Container Registry]
